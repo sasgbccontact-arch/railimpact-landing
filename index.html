@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RailImpact – Réservation & Pilotage ferroviaire B2B</title>
+  <meta name="description" content="RailImpact : réservation centralisée des billets de train, suivi en temps réel, IA prédictive (S.A.R.A.), tableaux de bord et rapports RSE Scope 3 pour entreprises." />
+  <style>
+    :root{
+      --bg:#404040;
+      --text:#ffffff;
+      --muted:#E7E7E7;
+      --muted-2:#CFCFCF;
+      --card:#4b4b4b;
+      --line:#5a5a5a;
+      --grad-a:#1FC182;
+      --grad-b:#7244BC;
+      --shadow: 0 10px 25px rgba(0,0,0,.25);
+      --radius:16px;
+      --radius-sm:12px;
+      --pad:clamp(16px, 3vw, 28px);
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:var(--pad)}
+    .row{display:grid;gap:24px}
+    .hero{padding:48px 0 12px}
+    .hero h1{font-size:clamp(28px,4vw,46px);line-height:1.1;margin:0 0 10px}
+    .grad{background:linear-gradient(90deg,var(--grad-a),var(--grad-b));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:var(--muted);font-size:clamp(16px,2.4vw,20px);max-width:860px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{appearance:none;border:0;border-radius:999px;padding:12px 18px;font-weight:600;cursor:pointer;box-shadow:var(--shadow);transition:.2s transform ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(90deg,var(--grad-a),var(--grad-b));color:#fff}
+    .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}
+    .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--muted-2);margin-right:8px;margin-bottom:8px}
+
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:28px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+    .card h3{margin:0 0 8px;font-size:20px}
+    .card p{margin:0;color:var(--muted)}
+
+    .section{padding:36px 0}
+    .section h2{font-size:clamp(22px,3vw,32px);margin:0 0 10px}
+    .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:16px}
+    .kpi{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px}
+    .kpi b{font-size:22px}
+
+    .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px;counter-reset:step}
+    .how .step{position:relative;padding:18px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.02)}
+    .how .step:before{counter-increment:step;content:counter(step);position:absolute;top:-12px;left:-12px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--grad-a),var(--grad-b));color:#fff;font-weight:700;box-shadow:var(--shadow)}
+
+    .grid-2{display:grid;gap:24px;grid-template-columns:1.2fr .8fr}
+    @media (max-width:900px){.grid-2{grid-template-columns:1fr}}
+
+    .badge{display:inline-block;background:linear-gradient(90deg,var(--grad-a),var(--grad-b));color:#fff;border-radius:999px;padding:6px 10px;font-weight:600}
+    .footer{border-top:1px solid var(--line);margin-top:36px;padding:18px 0;color:var(--muted-2);font-size:14px}
+    .hr{height:1px;background:var(--line);margin:24px 0}
+    .list{margin:10px 0 0;padding:0 0 0 18px;color:var(--muted)}
+
+    .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:14px}
+    .shot{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.02);text-decoration:none;color:inherit;box-shadow:var(--shadow)}
+    .shot img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:#303030}
+    .shot figcaption{padding:10px 12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="wrap hero">
+    <span class="badge">B2B · Mobilité ferroviaire</span>
+    <h1><span class="grad">RailImpact</span> — Réservation & pilotage des déplacements professionnels en train</h1>
+    <p class="lead">Suite logicielle (app mobile, logiciel, extension web) pour <strong>réserver</strong> les billets, suivre les trajets en <strong>temps réel</strong>, optimiser grâce à l’<strong>IA (S.A.R.A.)</strong>, et produire des <strong>rapports RSE Scope 3</strong> exploitables.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="mailto:sasgbc.contact@gmail.com?subject=Demande%20de%20d%C3%A9mo%20RailImpact">Demander une démo</a>
+      <a class="btn btn-ghost" href="#contact">Nous contacter</a>
+    </div>
+    <div style="margin-top:14px">
+      <span class="pill">Réservation centralisée</span>
+      <span class="pill">Suivi temps réel</span>
+      <span class="pill">IA prédictive (S.A.R.A.)</span>
+      <span class="pill">Tableaux de bord</span>
+      <span class="pill">Rapports Scope 3</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section">
+      <div class="grid-2">
+        <div>
+          <h2 class="grad">Pourquoi RailImpact&nbsp;?</h2>
+          <p class="lead">Les entreprises ont besoin d’outils fiables pour <strong>organiser</strong> leurs déplacements ferroviaires, <strong>réduire</strong> les coûts et <strong>valoriser</strong> leur mobilité durable. RailImpact unifie réservation, exploitation data et conformité RSE.</p>
+          <div class="cards">
+            <article class="card"><h3>Réservation centralisée</h3><p>Interface unifiée (mobile, desktop, extension) pour réserver rapidement les billets et <strong>centraliser les factures</strong>.</p></article>
+            <article class="card"><h3>Suivi en temps réel</h3><p>Infos live, <strong>notifications</strong> retards/annulations, <strong>ETA dynamiques</strong>, cartographie.</p></article>
+            <article class="card"><h3>IA S.A.R.A.</h3><p>Analyse historique et prédictive : détection de <strong>points de perturbation</strong>, propositions d’itinéraires alternatifs.</p></article>
+            <article class="card"><h3>Tableaux de bord</h3><p>Indicateurs clés : <strong>CO₂/NOx/PM</strong>, retards, km parcourus, temps moyens, <strong>coûts</strong>, économies grâce au rail.</p></article>
+            <article class="card"><h3>Rapports RSE</h3><p>Génération <strong>automatisée</strong> de rapports Scope 3 pour répondre aux obligations et valoriser la stratégie climat.</p></article>
+          </div>
+        </div>
+        <aside>
+          <div class="kpis">
+            <div class="kpi"><b>Temps réel</b><div>Alertes retards & suppressions</div></div>
+            <div class="kpi"><b>+ Data mobilité</b><div>CO₂, NOx, PM, coûts, trajets</div></div>
+            <div class="kpi"><b>Scope 3</b><div>Rapports prêts à l’emploi</div></div>
+            <div class="kpi"><b>Multi-supports</b><div>App, logiciel & extension</div></div>
+          </div>
+          <div class="hr"></div>
+          <p style="color:var(--muted)">Architecture <strong>cloud</strong> performante, <strong>RGPD</strong>, disponibilité continue, et UI réactive sur tous appareils.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="grad">Comment ça marche</h2>
+      <div class="how">
+        <div class="step"><h3>Rechercher</h3><p>Saisissez OD/date ; RailImpact s’appuie sur les horaires officiels pour afficher les meilleures options.</p></div>
+        <div class="step"><h3>Réserver</h3><p>Parcours fluide : sélection de l’offre, centralisation des factures, et distribution des billets aux voyageurs.</p></div>
+        <div class="step"><h3>Suivre</h3><p>Suivi en temps réel, cartes, notifications d’incidents, ETA ajustées en continu.</p></div>
+        <div class="step"><h3>Analyser & Reporter</h3><p>Dashboards, exports et rapports Scope 3 automatisés pour votre reporting RSE.</p></div>
+      </div>
+    </section>
+
+    <section id="screens" class="section">
+      <h2 class="grad">Aperçu du logiciel</h2>
+      <p class="lead">Quelques écrans clés de RailImpact (desktop / mobile). Les données affichées sont des exemples.</p>
+      <div class="shots">
+        <a class="shot" href="images/screen-1.png" target="_blank" rel="noopener">
+          <img src="images/screen-1.png" alt="Recherche de trajets – écran desktop" loading="lazy">
+          <figcaption>Recherche de trajets</figcaption>
+        </a>
+        <a class="shot" href="images/screen-3.png" target="_blank" rel="noopener">
+          <img src="images/screen-3.png" alt="Suivi temps réel & notifications – écran desktop" loading="lazy">
+          <figcaption>Suivi temps réel</figcaption>
+        </a>
+        <a class="shot" href="images/screen-4.png" target="_blank" rel="noopener">
+          <img src="images/screen-4.png" alt="Tableaux de bord & KPIs – écran desktop" loading="lazy">
+          <figcaption>Tableaux de bord</figcaption>
+        </a>
+        <a class="shot" href="images/screen-5.png" target="_blank" rel="noopener">
+          <img src="images/screen-5.png" alt="Rapports Scope 3 – écran desktop" loading="lazy">
+          <figcaption>Rapports Scope 3</figcaption>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 class="grad">Parler à un expert</h2>
+      <p class="lead">Discutons de vos besoins (réservation centralisée, temps réel, S.A.R.A., Scope 3) et d’un POC adapté à votre organisation.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:sasgbc.contact@gmail.com?subject=Contact%20RailImpact">Contact par e-mail</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap" style="padding-left:0;padding-right:0">
+        <div>© <span id="y"></span> RailImpact — SAS Groupe Boisset Connesson · Tous droits réservés.</div>
+        <div style="margin-top:6px">Contact : <a href="mailto:sasgbc.contact@gmail.com">sasgbc.contact@gmail.com</a></div>
+        <div style="margin-top:6px"><a href="privacy.html">Politique de confidentialité</a> • <a href="legal.html">Mentions légales</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
